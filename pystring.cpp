@@ -1314,7 +1314,7 @@ namespace path
     
     std::string join(const std::string & path1, const std::string & path2)
     {
-#ifdef WINDOWS
+#if 0 // WINDOWS // (this just causes problems when generating strings for other programs)
         return join_nt(path1, path2);
 #else
         return join_posix(path1, path2);
